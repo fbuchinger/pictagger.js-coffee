@@ -1,0 +1,43 @@
+<html>
+<head>
+<script type="text/javascript" src="../external/jquery-1.7.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/pictagger.css">
+<!--<script type="text/javascript" src="../external/coffee-script-1.1.2-min.js"></script>-->
+<script type="text/javascript" src="../external/underscore-1.1.7-min.js"></script>
+<script type="text/javascript" src="../external/backbone.js"></script>
+<script type="text/javascript" src="../srcjs/base.js"></script>
+<script type="text/javascript" src="../srcjs/tagger/datetime.js"></script>
+<script type="text/javascript" src="../srcjs/tagger/reldatetime.js"></script>
+<script type="text/javascript" src="../srcjs/source/exiftool.js"></script>
+<script type="text/javascript" src="../srcjs/source/picasaini.js"></script>
+<script type="text/javascript" src="../srcjs/sourcetags.js"></script>
+<script type="text/javascript" src="../srcjs/keywordtags.js"></script>
+<script type="text/javascript" src="../srcjs/photo.js"></script>
+<script type="text/javascript" src="../srcjs/util.js"></script>
+<script type="text/javascript" src="../srcjs/catalog.js"></script>
+<script type="text/javascript" src="../srcjs/tagger/datetimefunc.js"></script>
+<script type="text/javascript">
+ catalogOptions = {
+     taggers: [
+        new PicTagger.Taggers.RelativeDateTime({'activeTags': ['daydiff', 'weekdiff', 'yeardiff']}),
+        new PicTagger.Taggers.DateTime({'activeTags': ['weekday', 'calweek', 'season']})
+     ],
+     sources: [
+        new PicTagger.Sources.ExifTool('RAW Metadata', {
+             url: 'testcatalog/exiftool.json'
+         }),
+         new PicTagger.Sources.PicasaIni('Picasa.ini', {
+             url: 'testcatalog/picasa.ini'
+         }),
+     ]
+ };
+ $(function () {
+     window.catalog = new PicTagger.Catalog(catalogOptions);
+ });
+</script>
+</head>
+
+<body>
+<div id="bb" class="pt-container"></div>
+</body>
+</html>
