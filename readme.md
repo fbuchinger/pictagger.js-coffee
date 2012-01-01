@@ -55,50 +55,7 @@ See [taggers page in the pictagger wiki](https://github.com/fbuchinger/pictagger
 
 ## Developers
 
-
-### The innerds of pictagger.js
-
-### How to write your own tagger
-
-#### Standard (Synchronous) Taggers
-
-If your tagger doesn't need to perform any asynchronous actions (i.e. AJAX calls to webservices, web workers), you can follow this model:
-
-		PicTagger.addTagger({
-			name: 'DateTagger'
-			requires: ['Photo.Exif.DateTimeTaken'],
-			desires: ['Photo.GPS.Location'],
-			getSeason: function (date){
-				//available in the complete tagger
-			},
-			getDaytime: function (date){
-				//ditto
-			},
-			run: function (required, desired, options){
-				//do your calculations here
-				
-				function zeropad (){
-					//inner function, only available in run
-				}
-				
-				return [
-					{category: 'year', name: 'year' + date.getFullYear()},
-					{category: 'season', name: this.getSeason(date)},
-					{category: 'month', name: months[date.getMonth()]},
-					{category: 'daytime', name: this.getDaytime(date)},
-					{category: 'calweek', name:  'week' + zeropad(getWeekOfYear(date))},
-					{category: 'weekday', name:  weekdays[date.getDay()]},
-					{category: 'monthday', name:  'day' + zeropad(date.getDate())}
-				] 
-			}
-		});
-
-#### Asynchronous Taggers
-
-If you must perform AJAX calls in your tagger (e.g. for a geocoding tagger), you should invoke it with a Javascript Deferred Object and then return the promise function.
-PicTagger will automatically add the tags when the promise is resolved. Head over to the [jQuery Deferred Docs](http://api.jquery.com/category/deferred-object/) to learn more about this technique.
-(TODO: explain more about caching strategies)
-(Code sample coming soon)
+The [PicTagger API Page](https://github.com/fbuchinger/pictagger.js-coffee/wiki/PicTagger-API) offers ressources for developers.
 
 ## FAQ
 
