@@ -2,14 +2,14 @@
 
 ## About
 
-**pictagger.js** is an **automated photo tagging framework** written in javascript. It uses existing and ad-hoc-created **photo metadata** ([exif](http://de.wikipedia.org/wiki/Exchangeable_Image_File_Format), [geotagging](http://en.wikipedia.org/wiki/Geotagging), [face detection](http://en.wikipedia.org/wiki/Face_detection)) as a source for generating **descriptive tags**. the goal is to free the user from **automatable tagging tasks** (e.g. assigning holiday or location names) and establish **tag consistency**.
+**pictagger.js** is an **automated photo tagging framework** written in coffeescript/javascript. It uses existing and ad-hoc-created **photo metadata** ([exif](http://de.wikipedia.org/wiki/Exchangeable_Image_File_Format), [geotagging](http://en.wikipedia.org/wiki/Geotagging), [face detection](http://en.wikipedia.org/wiki/Face_detection)) as a source for generating **descriptive tags**. the goal is to free the user from **automatable tagging tasks** (e.g. assigning holiday or location names) and establish **tag consistency**.
 
-pictagger.js will soon be hosted on [github](https://github.com/fbuchinger/pictagger.js), You can report bugs and discuss features on the [issues page](https://github.com/fbuchinger/pictagger.js/issues).
+pictagger.js is hosted on [github](https://github.com/fbuchinger/pictagger.js-coffee), You can report bugs and discuss features on the [issues page](https://github.com/fbuchinger/pictagger.js/issues).
 
 Watch the [slides of my vienna.js talk on pictagger.js](http://www.slideshare.net/picurl/pictagger) or try a demo:
 
- * [Generating Tags from local jpeg files](demo/index.html)
- * [Faceted Tag search using Simile Exhibit](experiments/faceted-search.html)
+ * [Generating Tags from local jpeg files](http://picurl.org/pictagger.js/repo/demo/index.html)
+ * [Faceted Tag search using Simile Exhibit](http://picurl.org/pictagger.js/repo/experiments/faceted-search.html) (currently broken due to undocumented Picasa Feed Changes)
  
 ### Example
 
