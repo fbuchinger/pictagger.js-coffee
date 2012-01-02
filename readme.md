@@ -41,7 +41,7 @@ If you look at [Flickr's most popular tags](http://www.flickr.com/photos/tags/),
 
 ## How pictagger.js works
 
-pictagger.js runs in the browser and makes it easy to put a [dynamic, facet-browseable photo catalog](experiments/faceted-search.html) on a web page.
+pictagger.js runs in the browser and makes it easy to put a [dynamic, facet-browseable photo catalog](http://picurl.org/pictagger.js/repo/experiments/faceted-search.html) on a web page.
 The sources of this catalog can come from various origins (e.g. Flickr, Picasa, local file system), controls like the photo grid or a facet browser allow advanced views on the photo catalog. 
 
 The core component of pictagger.js are taggers, self-contained plugins, that convert cryptic metadata into human readable tags. 
