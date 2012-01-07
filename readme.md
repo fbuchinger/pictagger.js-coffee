@@ -48,6 +48,12 @@ The core component of pictagger.js are taggers, self-contained plugins, that con
 
 Below is a list of planned taggers to illustrate the power of pictagger.js, each tagger is accompaigned by a list of its emitted tags.
 
+## Sources
+
+## Facts
+
+## Findings
+
 
 ## Taggers
 
