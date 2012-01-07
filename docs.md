@@ -152,5 +152,5 @@ to be answered soon...
 * Jeremy Askenash for creating Backbone.js/underscore.js etc.
 * Gabriela Lucano for designing the wonderful pictagger.js logo
 
-<div><small>Pictagger.js &copy 2010-2011 by <a href="mailto: fbuchinger (at) gmail (dot) com">Franz Buchinger</a> </small></div>
+<div><small>Pictagger.js &copy 2010-2012 by <a href="mailto: fbuchinger (at) gmail (dot) com">Franz Buchinger</a> </small></div>
 
