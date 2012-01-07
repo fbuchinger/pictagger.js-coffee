@@ -71,42 +71,41 @@ A Fact is a discrete metadata chunk that is provided by a Pictagger.Source. Fact
  + normalize the metadata provided by various sources by using a common naming scheme
  + convert the "raw value" of the source metadata into the approbriate Javascript data type (e.g. "2012-01-01 14:25:11" --> Javascript Date object) for easier processing in taggers.
 
-### Fact Table
 
-#### FilePath:
+### FilePath:
 type: 'string'
 the relative path to the original photo file
-#### DatetimeTaken:
+### DatetimeTaken:
 type: 'string'
 Date and time at which the photo was taken
-#### ProcessingSoftware:
+### ProcessingSoftware:
 type: 'string'
 The name and version of the software used to post-process the picture
-#### Orientation:
+### Orientation:
 type: 'integer'
 rotation of the image in degrees clockwise
-#### CamMake:
+### CamMake:
 type: 'string'
 name of the camera manufacturer
-#### CamModel:
+### CamModel:
 type: 'string'
 name of the camera model
-#### LensID:
+### LensID:
 type: 'string'
 The name and properties of the used lens
-#### FlashUsed:
+### FlashUsed:
 type: 'boolean'
 Tells weather flash was used or not
-#### FlashModel:
+### FlashModel:
 type: 'string'
 The Model of the flash device if available
-#### FaceBox:
+### FaceBox:
 type: 'object'
 contains percentual top/left/bottom/right coordinates of the detected face
-#### Edited:
+### Edited:
 type: 'boolean'
 if the photo was edited or not    
-#### ThumbnailURL:
+### ThumbnailURL:
 type: 'string'
 relative url to the thumbnail of the image
 
