@@ -68,8 +68,9 @@ A source provides metadata about the photos contained in a catalog. It converts 
 ## Facts
 
 A Fact is a discrete metadata chunk that is provided by a Pictagger.Source. Facts have two purposes:
- + normalize the metadata provided by various sources by using a common naming scheme
- + convert the "raw value" of the source metadata into the approbriate Javascript data type (e.g. "2012-01-01 14:25:11" --> Javascript Date object) for easier processing in taggers.
+
+* normalize the metadata provided by various sources by using a common naming scheme
+* convert the "raw value" of the source metadata into the approbriate Javascript data type (e.g. "2012-01-01 14:25:11" --> Javascript Date object) for easier processing in taggers.
 
 ### Fact Table
 
