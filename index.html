@@ -6,7 +6,7 @@
 	<script type="text/javascript" src="external/showdown.js"></script>
 	<script type="text/javascript">
 		$(function(){
-			$.get('https://raw.github.com/fbuchinger/pictagger.js-coffee/master/readme.md', function(readme){
+			$.get('docs.md', function(readme){
 				var markdownConverter = new Showdown.converter();
 				$readmeHtml = $(markdownConverter.makeHtml(readme));
 				$('#readme').html($readmeHtml);
