@@ -48,16 +48,75 @@ The core component of pictagger.js are taggers, self-contained plugins, that con
 
 Below is a list of planned taggers to illustrate the power of pictagger.js, each tagger is accompaigned by a list of its emitted tags.
 
+## Catalog
+
+A Catalog is the overall container of a pictagger.js photo repository.
+
+Catalog structure:
+
+
 ## Sources
+
+A source provides metadata about the photos contained in a catalog. It converts information produced by other software or services into metadata units (facts) that are useable by PicTagger. Examples of such metadata can be a link to a thumbnail image of a photo, the date the photo was taken etc.
+
+### ExifTool
+
+### Picasa.ini
+
+### Face.com
 
 ## Facts
 
-## Findings
+A Fact is a discrete metadata chunk that is provided by a Pictagger.Source. Facts have two purposes:
+ + normalize the metadata provided by various sources by using a common naming scheme
+ + convert the "raw value" of the source metadata into the approbriate Javascript data type (e.g. "2012-01-01 14:25:11" --> Javascript Date object) for easier processing in taggers.
 
+### Fact Table
+
+    #### FilePath:
+        type: 'string'
+        the relative path to the original photo file
+    #### DatetimeTaken:
+        type: 'string'
+        Date and time at which the photo was taken
+    #### ProcessingSoftware:
+        type: 'string'
+        The name and version of the software used to post-process the picture
+    #### Orientation:
+        type: 'integer'
+        rotation of the image in degrees clockwise
+    #### CamMake:
+        type: 'string'
+        name of the camera manufacturer
+    #### CamModel:
+        type: 'string'
+        name of the camera model
+    #### LensID:
+        type: 'string'
+        The name and properties of the used lens
+    #### FlashUsed:
+        type: 'boolean'
+        Tells weather flash was used or not
+    #### FlashModel:
+        type: 'string'
+        The Model of the flash device if available
+    #### FaceBox:
+        type: 'object'
+        contains percentual top/left/bottom/right coordinates of the detected face
+    #### Edited:
+        type: 'boolean'
+        if the photo was edited or not
+    #### ThumbnailURL:
+        type: 'string'
+        relative url to the thumbnail of the image
 
 ## Taggers
 
 See [taggers page in the pictagger wiki](https://github.com/fbuchinger/pictagger.js-coffee/wiki/Taggers) for a list of planned and implemented taggers.
+
+## Findings
+
+Findings are the conclusions taggers draw based on the given photo facts and their own "knowledge". From the fact 'DateTimeTaken' -> "2012-01-01 14:25:11" the holiday tagger could infer that the photo was taken `new year's day` and emit the approbriate finding.
 
 ## Developers
 
