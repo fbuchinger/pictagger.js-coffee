@@ -1,90 +1,117 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-  <meta charset='utf-8'>
-
-  <title>fbuchinger/pictagger.js-coffee @ GitHub</title>
-
-  <style type="text/css">
-    body {
-      margin-top: 1.0em;
-      background-color: #36f1f8;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #000000;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-    h1 { font-size: 3.8em; color: #c90e07; margin-bottom: 3px; }
-    h1 .small { font-size: 0.4em; }
-    h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #c90e07; }
-    h3 { text-align: center; color: #c90e07; }
-    a { color: #c90e07; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-    pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-  </style>
+    <title>pictagger.js - one photo, one thousand tags</title>
+	<script type="text/javascript" src="external/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="external/showdown.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$.get('https://raw.github.com/fbuchinger/pictagger.js-coffee/master/readme.md', function(readme){
+				var markdownConverter = new Showdown.converter();
+				$readmeHtml = $(markdownConverter.makeHtml(readme));
+				$('#readme').html($readmeHtml);
+				
+				var $sidebarToc = $('#toc');
+				$('#readme').find(':header').each(function(){
+					var $heading = $(this);
+					var headingTxt = $heading.text();
+					$heading.wrap($('<a/>').attr({name: headingTxt}));
+					$('<li>')
+						.addClass("toc-" + $heading[0].tagName.toLowerCase())
+						.append($('<a/>').attr({href: '#' + headingTxt}).html(headingTxt))
+						.appendTo($sidebarToc);
+				});
+				
+			});
+		});
+	</script>
+	<style type="text/css">
+		body {
+			font-family: Helvetica Neue,Helvetica,Arial;
+			font-size: 14px;
+			line-height: 22px;
+		}
+		
+		a {
+			color: black;
+		}
+		
+		a:hover {
+			background-color: #F2A202;
+		}
+	
+		#toc {
+			list-style-type: none;
+			margin-top: 40px;
+		}
+		
+		#toc a {
+			text-decoration: none;
+		}
+		
+		#toc .toc-h2 {
+			margin-left: -40px;
+			font-size: 14px;
+		}
+		
+		#toc .toc-h3 {
+			margin-left: -20px;
+			font-size: 12px;
+		}
+		
+		#toc .toc-h4 {
+			margin-left: -10px;
+			font-size: 11px;
+		}
+		
+		#readme p:first-child {
+			margin-top:-30px;
+		}
+		
+		#readme code {
+			border: 1px solid #ddd;
+			background-color: rgba(239, 159, 0, 0.2);
+			font-size:11px;
+			padding: 2px;
+		}
+		
+		#readme pre code {
+			border: none;
+			background: transparent;
+		}
+	
+		div#sidebar {
+		  background: none repeat scroll 0 0 #f2f2f2;
+		  bottom: 0;
+		  box-shadow: 0 0 20px #CCCCCC;
+		  left: 0;
+		  overflow-x: hidden;
+		  overflow-y: auto;
+		  padding: 15px 0 30px 30px;
+		  position: fixed;
+		  top: 0;
+		  width: 200px;
+		}
+	
+		div#readme {
+		   margin: 40px 0 50px 260px;
+		   position: relative;
+		   width: 650px;
+		}
+	</style>
+	
+	
 </head>
-
 <body>
-  <a href="https://github.com/fbuchinger/pictagger.js-coffee"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+This is the readme
+<div id="sidebar">
+<ul id="toc">
+</ul>
+</div>
+<div id="readme">
 
-  <div id="container">
 
-    <div class="download">
-      <a href="https://github.com/fbuchinger/pictagger.js-coffee/zipball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/zip.png"></a>
-      <a href="https://github.com/fbuchinger/pictagger.js-coffee/tarball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/tar.png"></a>
-    </div>
-
-    <h1><a href="https://github.com/fbuchinger/pictagger.js-coffee">pictagger.js-coffee</a>
-      <span class="small">by <a href="https://github.com/fbuchinger">fbuchinger</a></span></h1>
-
-    <div class="description">
-      coffeescript port of pictagger. please check <a href="https://github.com/fbuchinger/pictagger.js-coffee/blob/master/readme.md">readme.md</a> for more info.
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-      <h2>Authors</h2>
-      <p>Franz Buchinger (fbuchinger@gmail.com)
-<br/>      </p>
-    
-
-    
-      <h2>Contact</h2>
-      <p> (fbuchinger@gmail.com)
-<br/>      </p>
-    
-
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="https://github.com/fbuchinger/pictagger.js-coffee/zipball/master">zip</a> or
-      <a href="https://github.com/fbuchinger/pictagger.js-coffee/tarball/master">tar formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/fbuchinger/pictagger.js-coffee</pre>
-    </p>
-
-    <div class="footer">
-      get the source code on GitHub : <a href="https://github.com/fbuchinger/pictagger.js-coffee">fbuchinger/pictagger.js-coffee</a>
-    </div>
-
-  </div>
-
+</div>
 </body>
 </html>
+
