@@ -73,42 +73,42 @@ A Fact is a discrete metadata chunk that is provided by a Pictagger.Source. Fact
 
 ### Fact Table
 
-    #### FilePath:
-        type: 'string'
-        the relative path to the original photo file
-    #### DatetimeTaken:
-        type: 'string'
-        Date and time at which the photo was taken
-    #### ProcessingSoftware:
-        type: 'string'
-        The name and version of the software used to post-process the picture
-    #### Orientation:
-        type: 'integer'
-        rotation of the image in degrees clockwise
-    #### CamMake:
-        type: 'string'
-        name of the camera manufacturer
-    #### CamModel:
-        type: 'string'
-        name of the camera model
-    #### LensID:
-        type: 'string'
-        The name and properties of the used lens
-    #### FlashUsed:
-        type: 'boolean'
-        Tells weather flash was used or not
-    #### FlashModel:
-        type: 'string'
-        The Model of the flash device if available
-    #### FaceBox:
-        type: 'object'
-        contains percentual top/left/bottom/right coordinates of the detected face
-    #### Edited:
-        type: 'boolean'
-        if the photo was edited or not
-    #### ThumbnailURL:
-        type: 'string'
-        relative url to the thumbnail of the image
+#### FilePath:
+type: 'string'
+the relative path to the original photo file
+#### DatetimeTaken:
+type: 'string'
+Date and time at which the photo was taken
+#### ProcessingSoftware:
+type: 'string'
+The name and version of the software used to post-process the picture
+#### Orientation:
+type: 'integer'
+rotation of the image in degrees clockwise
+#### CamMake:
+type: 'string'
+name of the camera manufacturer
+#### CamModel:
+type: 'string'
+name of the camera model
+#### LensID:
+type: 'string'
+The name and properties of the used lens
+#### FlashUsed:
+type: 'boolean'
+Tells weather flash was used or not
+#### FlashModel:
+type: 'string'
+The Model of the flash device if available
+#### FaceBox:
+type: 'object'
+contains percentual top/left/bottom/right coordinates of the detected face
+#### Edited:
+type: 'boolean'
+if the photo was edited or not    
+#### ThumbnailURL:
+type: 'string'
+relative url to the thumbnail of the image
 
 ## Taggers
 
