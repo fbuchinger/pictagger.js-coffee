@@ -1,4 +1,4 @@
-![pictagger.js](http://picurl.org/pictagger.js/repo/demo/img/pictagger-logo-medium.png)
+![pictagger.js](/img/logo_pictagger.png)
 
 ## About
 
